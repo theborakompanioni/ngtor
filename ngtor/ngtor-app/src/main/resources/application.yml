@@ -1,0 +1,41 @@
+app.name: ngtor
+app.description: Easy, simple and instant Onion URLs to your localhost server.
+app.home: '${user.home}/.ngtor'
+
+spring.application.name: '${app.name}'
+spring.http.log-request-details: false
+
+server.port: 8080
+server.use-forward-headers: true
+server.compression.enabled: true
+
+management.server.port: 9001
+
+# LOGGING
+logging.file.name: '${app.home}/${app.name}.log'
+logging.config: classpath:logback.xml
+logging.level.org.springframework: INFO
+logging.level.org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: TRACE
+#logging.level.web: DEBUG
+
+info.app:
+  name: "${app.name}"
+  description: "${app.description}"
+  java:
+    version: "${java.version}"
+    runtime:
+        version: "${java.runtime.version}"
+  user:
+    timezone: "${user.timezone}"
+
+management.endpoint.health.show-details: 'always'
+management.endpoints.web.exposure.include: '*'
+management.info.tor.enabled: true
+management.info.hiddenService.enabled: true
+management.health.hiddenService.enabled: true
+
+org.tbk.tor:
+  enabled: false  # default is `true`
+  auto-publish-enabled: false # default is `true`
+  working-directory: '${app.home}/tor-working-dir' # default is `tor-working-dir`
+  startup-timeout: 30s # default is `60s`

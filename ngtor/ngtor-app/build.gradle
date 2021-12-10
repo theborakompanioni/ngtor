@@ -1,0 +1,17 @@
+apply plugin: 'org.springframework.boot'
+
+description = 'tor example application package'
+
+bootJar {
+    archiveBaseName.set('ngtor')
+    archiveClassifier.set('')
+}
+
+dependencies {
+    implementation "io.github.theborakompanioni:spring-tor-starter:${bitcoinSpringBootStarterVersion}"
+
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+
+    implementation 'io.micrometer:micrometer-registry-prometheus'
+}

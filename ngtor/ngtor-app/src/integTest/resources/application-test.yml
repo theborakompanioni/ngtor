@@ -1,0 +1,9 @@
+app.name: ngtor-test
+app.description: Test run of ngtor
+app.home: './app-test'
+
+org.tbk.tor:
+  enabled: true  # default is `true`
+  auto-publish-enabled: false # default is `true`
+  working-directory: '${app.home}/tor-working-dir' # default is `tor-working-dir`
+  startup-timeout: 30s # default is `60s`

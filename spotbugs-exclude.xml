@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FindBugsFilter
+        xmlns="https://github.com/spotbugs/filter/3.0.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="https://github.com/spotbugs/filter/3.0.0 https://raw.githubusercontent.com/spotbugs/spotbugs/4.2.2/spotbugs/etc/findbugsfilter.xsd">
+    <!--
+        see https://spotbugs.readthedocs.io/en/latest/filter.html for documentation
+    -->
+    <Match>
+        <Or>
+            <!-- suggests using '%n rather than \n' in string formats.. did not work properly in manual tests -->
+            <Bug pattern="VA_FORMAT_STRING_USES_NEWLINE"/>
+            <!-- exclude 'serialVersionUID' warnings: https://github.com/projectlombok/lombok/wiki/WHY-NOT:-serialVersionUID -->
+            <Bug pattern="SE_NO_SERIALVERSIONID"/>
+            <!--
+                prevents false positives for 'nullcheck of nonnull' in try-catch clauses
+                can be removed when #600 is merged: https://github.com/spotbugs/spotbugs/pull/1575/files
+             -->
+            <Bug pattern="RCN_REDUNDANT_NULLCHECK_OF_NONNULL_VALUE"/>
+        </Or>
+    </Match>
+
+    <Match>
+        <!-- disable some known risks or minor warnings in test classes -->
+        <Class name="~.*Test"/>
+        <Or>
+            <!-- disable minor 'include CRLF characters into log messages' warning in test classes -->
+            <Bug pattern="CRLF_INJECTION_LOGS"/>
+        </Or>
+    </Match>
+
+    <Match>
+        <!-- prevents protobuf false positives, e.g. 'Useless control flow' in generated builder classes -->
+        <Class name="~.*\$Builder"/>
+        <Method name="maybeForceBuilderInitialization"/>
+        <Bug pattern="UCF_USELESS_CONTROL_FLOW"/>
+    </Match>
+
+    <Match>
+        <!--
+            prevents false positives in spring boot:
+            HealthContributorAutoConfigs cannot be an inner static class - would not be picked up by spring correctly
+        -->
+        <Class name="~.*HealthContributorAutoConfiguration"/>
+        <Bug pattern="SIC_INNER_SHOULD_BE_STATIC"/>
+    </Match>
+
+    <Match>
+        <Or>
+            <!-- all classes named '*Api' or '*Ctrl' are known to be Spring endpoints and should not be reported -->
+            <Class name="~.*Api"/>
+            <Class name="~.*Ctrl"/>
+        </Or>
+        <Bug pattern="SPRING_ENDPOINT"/>
+    </Match>
+
+</FindBugsFilter>
