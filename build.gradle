@@ -125,10 +125,6 @@ subprojects {
     }
 
     jar {
-        exclude('*-local.yml')
-        exclude('**/mainnet/**')
-        exclude('**/*.proto')
-
         includeEmptyDirs false
     }
 
