@@ -5,7 +5,6 @@ ext {
     checkstyleVersion = '8.44'
     findsecbugsPluginVersion = '1.11.0'
     springBootGradlePluginVersion = '2.7.4'
-    protobufGradleVersion = '0.8.17'
 }
 
 // hack: 2022-10-08T00:00Z - change this timestamp to invalidate GitHub Actions gradle caches.
