@@ -16,7 +16,7 @@ buildscript {
 plugins {
     id 'idea'
     id 'nebula.release' version '15.3.1'
-    id 'nebula.lint' version '16.17.0'
+    id 'nebula.lint' version '17.6.1'
     id 'nebula.project' version '7.0.9'
     id 'nebula.info' version '9.3.0'
     id 'com.github.spotbugs' version '4.7.1' apply false
@@ -50,17 +50,14 @@ allprojects {
     gradleLint {
         alwaysRun = false // do not automatically run - must be executed manually
         autoLintAfterFailure = false // only run lint after a successful build
-        rules = [
-                // just warn because it has some false positives e.g. when excluding slf4j-log4j12 for moquette
-                'unused-exclude-by-dep'
-        ]
         criticalRules = [
                 'dependency-parantheses',
                 'overridden-dependency-version',
                 'unused-exclude-by-conf',
-                'duplicate-dependency-class',
                 'dependency-tuple-expression'
         ]
+        // duplicate dependency false positives from "compileOnly 'javax.servlet:javax.servlet-api'"
+        excludedRules = ['duplicate-dependency-class']
     }
 }
 
@@ -187,9 +184,9 @@ subprojects {
         dependsOn test // tests are required to run before generating the report
 
         reports {
-            xml.enabled = true
-            html.enabled = true
-            csv.enabled = false
+            xml.required = true
+            html.required = true
+            csv.required = false
         }
     }
 
@@ -254,11 +251,11 @@ subprojects {
         excludeFilter = rootProject.file('./spotbugs-exclude.xml')
         reportsDir = rootProject.file("$rootProject.buildDir/reports/spotbugs/$project.name")
     }
-    tasks.withType(com.github.spotbugs.snom.SpotBugsTask) {
+    spotbugsMain {
         onlyIf { gradle.taskGraph.hasTask('build') }
         reports {
-            html.enabled = true
-            xml.enabled = false
+            xml.required = false
+            html.required = true
         }
     }
 
@@ -272,8 +269,8 @@ subprojects {
     tasks.withType(Checkstyle) {
         onlyIf { gradle.taskGraph.hasTask('build') }
         reports {
-            xml.enabled = false
-            html.enabled = true
+            xml.required = false
+            html.required = true
         }
     }
 
