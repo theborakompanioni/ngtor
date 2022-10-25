@@ -173,6 +173,7 @@ See [Awesome Tunneling](https://github.com/anderspitman/awesome-tunneling) by [@
 ---
 - tor-binary (GitHub): https://github.com/bisq-network/tor-binary
 - netlayer (GitHub): https://github.com/bisq-network/netlayer
+- tor-spring-boot-starter (GitHub): https://github.com/theborakompanioni/tor-spring-boot-starter
 
 
 ## License
