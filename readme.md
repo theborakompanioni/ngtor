@@ -36,11 +36,11 @@ Easily expose local services via Tor
 Serve the specified port via Tor (default is `8080`).
 
 ```shell script
-$ ngtor.jar http --http=8080
+$ ngtor.jar http --port=3000
 ```
 ```
-Setting up hidden service 'ngtor_main' for port 8080
-✔ Service 'ngtor_main' to 127.0.0.1:8080 activated on: http://0123456789abcdef.onion
+Setting up hidden service 'ngtor_main' for port 3000
+✔ Service 'ngtor_main' to 127.0.0.1:3000 activated on: http://0123456789abcdef.onion
 ```
 
 ### `demo`
