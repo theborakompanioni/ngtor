@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Breaking
 
 ### Changed
+- upgrade: update gradle from v7.4.2 to v7.5.1
 
 ### Removed
 
