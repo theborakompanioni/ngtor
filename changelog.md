@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 ### Breaking
+- upgrade: update java from v11 to v17
 
 ### Changed
 - upgrade: update gradle from v7.4.2 to v7.5.1

@@ -106,7 +106,7 @@ Usage: ./ngtor.jar COMMAND [OPTION...]
 ## Development
 
 ### Requirements
-- java >=11
+- java >=17
 
 ### Build
 ```shell script
