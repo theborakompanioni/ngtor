@@ -19,7 +19,7 @@ plugins {
     id 'nebula.lint' version '17.6.1'
     id 'nebula.project' version '7.0.9'
     id 'nebula.info' version '9.3.0'
-    id 'com.github.spotbugs' version '4.7.1' apply false
+    id 'com.github.spotbugs' version '5.0.13' apply false
     id 'org.springframework.boot' version "$springBootGradlePluginVersion" apply false
     id 'io.franzbecker.gradle-lombok' version '4.0.0' apply false
 }

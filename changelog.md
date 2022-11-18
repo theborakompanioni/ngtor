@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - upgrade: update gradle from v7.4.2 to v7.5.1
+- upgrade: update spotbugs plugin from v4.7.1 to v5.0.13
 
 ### Removed
 
