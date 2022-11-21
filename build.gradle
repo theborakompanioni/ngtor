@@ -15,13 +15,12 @@ buildscript {
 
 plugins {
     id 'idea'
-    id 'nebula.release' version '15.3.1'
-    id 'nebula.lint' version '17.6.1'
-    id 'nebula.project' version '7.0.9'
-    id 'nebula.info' version '9.3.0'
+    id 'nebula.release' version '17.1.0'
+    id 'nebula.lint' version '17.7.1'
+    id 'com.netflix.nebula.project' version '10.0.1'
     id 'com.github.spotbugs' version '5.0.13' apply false
     id 'org.springframework.boot' version "$springBootGradlePluginVersion" apply false
-    id 'io.franzbecker.gradle-lombok' version '4.0.0' apply false
+    id 'io.franzbecker.gradle-lombok' version '5.0.0' apply false
 }
 
 contacts {
@@ -82,9 +81,9 @@ subprojects {
     apply plugin: 'jacoco'
     apply plugin: 'checkstyle'
     apply plugin: 'com.github.spotbugs'
-    apply plugin: 'nebula.project'
+    apply plugin: 'com.netflix.nebula.project'
     apply plugin: 'nebula.info'
-    apply plugin: 'nebula.integtest-standalone'
+    apply plugin: 'com.netflix.nebula.integtest-standalone'
     apply plugin: 'io.franzbecker.gradle-lombok'
     apply plugin: 'io.spring.dependency-management'
 
