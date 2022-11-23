@@ -50,20 +50,20 @@ Spin up a webserver and serve a demo page via tor.
 $ ngtor.jar demo
 ```
 ```
-2009-01-03 22:00:10.937  INFO 385273 --- [           main] org.tbk.ngtor.NgtorApplication           : Starting NgtorApplication v0.1.0-dev
-2009-01-03 22:00:12.208  INFO 385273 --- [           main] org.berndpruenster.netlayer.tor.Tor      : Starting Tor
-2009-01-03 22:00:15.427  INFO 385273 --- [           main] org.tbk.ngtor.NgtorApplication           : Started NgtorApplication in 6.972 seconds (JVM running for 7.538)
-2009-01-03 22:00:15.505  INFO 385273 --- [           main] org.tbk.ngtor.command.DemoCommand        : =================================================
-2009-01-03 22:00:15.505  INFO 385273 --- [           main] org.tbk.ngtor.command.DemoCommand        : url: http://0123456789abcdef.onion
-2009-01-03 22:00:15.507  INFO 385273 --- [           main] org.tbk.ngtor.command.DemoCommand        : virtual host: 0123456789abcdef.onion
-2009-01-03 22:00:15.507  INFO 385273 --- [           main] org.tbk.ngtor.command.DemoCommand        : virtual port: 80
-2009-01-03 22:00:15.507  INFO 385273 --- [           main] org.tbk.ngtor.command.DemoCommand        : host: 127.0.0.1
-2009-01-03 22:00:15.507  INFO 385273 --- [           main] org.tbk.ngtor.command.DemoCommand        : port: 8080
-2009-01-03 22:00:15.507  INFO 385273 --- [           main] org.tbk.ngtor.command.DemoCommand        : directory: /home/void/.ngtor/tor-working-dir/ngtor_demo
-2009-01-03 22:00:15.507  INFO 385273 --- [           main] org.tbk.ngtor.command.DemoCommand        : -------------------------------------------------
-2009-01-03 22:00:15.507  INFO 385273 --- [           main] org.tbk.ngtor.command.DemoCommand        : Or browse to http://0123456789abcdef.onion in Tor Browser, or
-2009-01-03 22:00:15.507  INFO 385273 --- [           main] org.tbk.ngtor.command.DemoCommand        : run: `torsocks -p 38155 curl http://0123456789abcdef.onion/index.html -v`
-2009-01-03 22:00:15.508  INFO 385273 --- [           main] org.tbk.ngtor.command.DemoCommand        : =================================================
+2009-01-03 22:00:10.937  INFO [...] : Starting NgtorApplication v0.1.0-dev
+2009-01-03 22:00:12.208  INFO [...] : Starting Tor
+2009-01-03 22:00:15.427  INFO [...] : Started NgtorApplication in 6.972 seconds (JVM running for 7.538)
+2009-01-03 22:00:15.505  INFO [...] : =================================================
+2009-01-03 22:00:15.505  INFO [...] : url: http://0123456789abcdef.onion
+2009-01-03 22:00:15.507  INFO [...] : virtual host: 0123456789abcdef.onion
+2009-01-03 22:00:15.507  INFO [...] : virtual port: 80
+2009-01-03 22:00:15.507  INFO [...] : host: 127.0.0.1
+2009-01-03 22:00:15.507  INFO [...] : port: 8080
+2009-01-03 22:00:15.507  INFO [...] : directory: /home/tbk/.ngtor/tor-working-dir/ngtor_demo
+2009-01-03 22:00:15.507  INFO [...] : -------------------------------------------------
+2009-01-03 22:00:15.507  INFO [...] : Or browse to http://0123456789abcdef.onion in Tor Browser, or
+2009-01-03 22:00:15.507  INFO [...] : run: `torsocks -p 38155 curl http://0123456789abcdef.onion/index.html -v`
+2009-01-03 22:00:15.508  INFO [...] : =================================================
 ```
 
 ### `check`
@@ -121,7 +121,7 @@ or
 ```shell script
 ./ngtor/ngtor-app/build/libs/ngtor.jar check
 ```
- 
+
 ### Test
 ```shell script
 ./gradlew test integrationTest
@@ -157,8 +157,8 @@ is used for checking Java source code for adherence to a Code Standard.
 
 
 ## Contributing
-All contributions and ideas are always welcome. For any question, bug or feature request, 
-please create an [issue](https://github.com/theborakompanioni/ngtor/issues). 
+All contributions and ideas are always welcome. For any question, bug or feature request,
+please create an [issue](https://github.com/theborakompanioni/ngtor/issues).
 Before you start, please read the [contributing guidelines](contributing.md).
 
 

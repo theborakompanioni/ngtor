@@ -26,12 +26,19 @@ e.g. to publish to your local maven repository:
 
 ### Maven Central
 ```
-  ./gradlew clean -Prelease.useLastTag=true assemble sign -Psigning.password=secret publishAllPublicationsToMavenRepository -PossrhPassword=secret
+./gradlew -Dorg.gradle.parallel=false -Prelease.useLastTag=true \
+    clean assemble \
+    sign -Psigning.password=secret \
+    publishAllPublicationsToMavenRepository -PossrhPassword=secret
 ```
 
 e.g. publishing an individual module to Maven Central (notice params `signing.password` and `ossrhPassword`):
 ```
-  ./gradlew -p spring-tor/spring-tor-core clean -Prelease.useLastTag=true assemble sign -Psigning.password=secret publishAllPublicationsToMavenRepository -PossrhPassword=secret
+./gradlew -p spring-tor/spring-tor-core \
+    -Dorg.gradle.parallel=false -Prelease.useLastTag=true \
+    clean assemble \
+    sign -Psigning.password=secret \
+    publishAllPublicationsToMavenRepository -PossrhPassword=secret
 ```
 
 In your local `~/.gradle/gradle.properties` you need
