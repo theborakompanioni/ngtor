@@ -96,6 +96,11 @@ subprojects {
             // needed for netlayer
             url "https://jitpack.io"
         }
+        mavenLocal {
+            mavenContent {
+                snapshotsOnly()
+            }
+        }
     }
 
     dependencyManagement {
