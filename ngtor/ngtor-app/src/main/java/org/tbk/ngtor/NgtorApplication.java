@@ -52,11 +52,10 @@ public class NgtorApplication implements InitializingBean {
         // TODO: currently done stupidly.. should not be done via manipulating args list
         // -> e.g. extend core autoconfigure instead of using tor-starter (maybe)
         boolean enableTor = torCommands.contains(command);
-        if (enableTor) {
-            argsList.add("--org.tbk.tor.enabled=true");
-        } else {
-            argsList.add("--org.tbk.tor.enabled=false");
-        }
+        argsList.add("--org.tbk.tor.enabled=" + enableTor);
+
+        boolean publishHiddenService = "demo".equals(command);
+        argsList.add("--org.tbk.tor.auto-publish-enabled=" + publishHiddenService);
 
         return argsList;
     }
