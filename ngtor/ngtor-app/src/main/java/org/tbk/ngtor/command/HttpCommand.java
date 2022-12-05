@@ -29,10 +29,10 @@ public class HttpCommand implements ApplicationRunner {
                 hiddenServiceDefinition.getPort(),
                 buildOnionUrl(hiddenServiceDefinition));
 
-        // inform user by logging to console..
+        // inform user by logging to console...
         System.out.println(ConsoleColors.green("✔") + " " + message);
 
-        // ..but also write to log file
+        // ...but also write to log file
         log.info(message);
     }
 

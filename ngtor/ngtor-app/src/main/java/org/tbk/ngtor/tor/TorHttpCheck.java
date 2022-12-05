@@ -12,6 +12,7 @@ import java.nio.charset.StandardCharsets;
 
 @RequiredArgsConstructor
 public final class TorHttpCheck {
+    private static final String TOR_CHECK_URL = "https://check.torproject.org/";
 
     @NonNull
     private final HttpClient torHttpClient;
@@ -20,7 +21,7 @@ public final class TorHttpCheck {
         String successPhrase = "Congratulations. This browser is configured to use Tor.";
         String errorPhraseIgnoreCase = "not using Tor";
 
-        HttpGet req = new HttpGet("https://check.torproject.org/");
+        HttpGet req = new HttpGet(TOR_CHECK_URL);
 
         HttpResponse rsp = torHttpClient.execute(req);
 

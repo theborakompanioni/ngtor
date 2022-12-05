@@ -11,7 +11,7 @@ Easily expose local services via Tor
 
 - Tunnel traffic via Tor to your locally running service
 - Serve static via Tor with a single command
-- All-in-one binary for macos, linux and windows
+- All-in-one binary for macOS, linux and windows
 
 **Note**: This software is functional, but in early development. Expect breaking changes till v1.0 is reached.
 

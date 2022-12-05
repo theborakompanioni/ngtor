@@ -19,6 +19,7 @@ import java.util.*;
 public class NgtorApplication implements InitializingBean {
 
     private static final Set<String> commands = Set.of("http", "serve", "check", "demo", "help", "version");
+
     // enable tor on a subset of commands (e.g. "help" does not need tor daemon)
     private static final Set<String> torCommands = Set.of("http", "serve", "check", "demo");
 
@@ -79,7 +80,6 @@ public class NgtorApplication implements InitializingBean {
                 .logStartupInfo(true)
                 .run(args);
     }
-
 
     public static ApplicationListener<?> applicationPidFileWriter() {
         return new ApplicationPidFileWriter("application.pid");

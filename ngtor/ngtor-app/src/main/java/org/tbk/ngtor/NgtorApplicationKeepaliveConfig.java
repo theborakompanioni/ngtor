@@ -13,6 +13,7 @@ import org.tbk.ngtor.conditional.ConditionalOnCommand;
  * Some console commands need to stay running.
  * This config schedules a proxy task to keep the application alive.
  *
+ * <p>
  * Insert any console command that should be kept running.
  * e.g. {@link org.tbk.ngtor.command.HttpCommand}
  */

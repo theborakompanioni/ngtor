@@ -31,7 +31,7 @@ public @interface ConditionalOnCommand {
      * Specify if the condition should match if the command is not set. Defaults to
      * {@code false}.
      *
-     * @return if should match if the command is missing
+     * @return should match if the command is missing
      */
     boolean matchIfMissing() default false;
 
