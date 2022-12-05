@@ -1,5 +1,6 @@
 package org.tbk.ngtor.conditional;
 
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.autoconfigure.condition.ConditionMessage;
@@ -31,6 +32,10 @@ import static java.util.Objects.requireNonNull;
 @Order(Ordered.HIGHEST_PRECEDENCE + 21_000_000)
 class OnCommandCondition extends SpringBootCondition {
 
+    @SuppressFBWarnings(
+            value = "NP_NULL_ON_SOME_PATH_FROM_RETURN_VALUE",
+            justification = "False positive. Should throw on unexpected null values!"
+    )
     @Override
     public ConditionOutcome getMatchOutcome(ConditionContext context, AnnotatedTypeMetadata metadata) {
         MultiValueMap<String, Object> multiValueMap = requireNonNull(metadata.getAllAnnotationAttributes(ConditionalOnCommand.class.getName()));

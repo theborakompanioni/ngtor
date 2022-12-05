@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Conditional;
 import java.lang.annotation.*;
 
 /**
- *
+ * {@link Conditional @Conditional} that matches when a given command is executed.
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.TYPE, ElementType.METHOD})

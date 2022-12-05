@@ -9,7 +9,7 @@
     with a few tweaks by Will Molloy (https://wilmol.com/).
 
     Note this assumes spotless (with googleJavaFormat()) is used in conjunction with checkstyle.
-    Therefore some rules (e.g. LineLength, Indentation) are disabled as they conflict with spotless.
+    Therefor some rules (e.g. LineLength, Indentation) are disabled as they conflict with spotless.
  -->
 
 <module name="Checker">
@@ -407,15 +407,14 @@
         </module -->
 
         <!-- General Regexp -->
-        <!-- Ensure no printing to console
-        TODO there is an IDEA inspection for this
-        -->
-        <module name="RegexpSinglelineJava">
+        <!-- Ensure no printing to console -->
+        <!-- disabled because it is okay for this application -->
+        <!--module name="RegexpSinglelineJava">
             <property name="format"
                       value="((System\.(out|err))|printStackTrace|(out|err)\.(print|write|append))"/>
             <property name="ignoreComments" value="true"/>
             <property name="message" value="No printing to console, use more robust logging."/>
-        </module>
+        </module-->
         <!-- "legacy" core APIs that no one who values their livelihood should ever use
         TODO there is an IDEA inspection for this
         -->

@@ -9,6 +9,7 @@ import org.apache.http.util.EntityUtils;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
+import java.util.Locale;
 
 @RequiredArgsConstructor
 public final class TorHttpCheck {
@@ -27,7 +28,7 @@ public final class TorHttpCheck {
 
         String body = EntityUtils.toString(rsp.getEntity(), StandardCharsets.UTF_8);
 
-        boolean containsErrorPhrase = body.toLowerCase().contains(errorPhraseIgnoreCase.toLowerCase());
+        boolean containsErrorPhrase = body.toLowerCase(Locale.US).contains(errorPhraseIgnoreCase.toLowerCase(Locale.US));
         boolean containsSuccessPhrase = body.contains(successPhrase);
 
         return containsSuccessPhrase && !containsErrorPhrase;

@@ -1,5 +1,6 @@
 package org.tbk.ngtor;
 
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Value;
@@ -22,6 +23,10 @@ class NgtorApplicationConfig implements InitializingBean {
         checkAppHomeDirectory();
     }
 
+    @SuppressFBWarnings(
+            value = "PATH_TRAVERSAL_IN",
+            justification = "Path is controlled by operator not by user input."
+    )
     private void checkAppHomeDirectory() throws IOException {
         log.debug("Checking home directory '{}'", homeDir);
 

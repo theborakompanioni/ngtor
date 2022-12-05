@@ -6,4 +6,33 @@
     <!--
         see https://spotbugs.readthedocs.io/en/latest/filter.html for documentation
     -->
+    <Match>
+        <Or>
+            <!-- disable some known risks or minor warnings in test classes -->
+            <Class name="~.*Test"/>
+            <Class name="org.tbk.ngtor.NgtorApplicationConfig"/>
+            <And>
+                <Package name="org.tbk.ngtor.command"/>
+                <Class name="~.*Command"/>
+            </And>
+        </Or>
+        <!-- disable minor 'include CRLF characters into log messages' warning in test classes -->
+        <Bug pattern="CRLF_INJECTION_LOGS"/>
+    </Match>
+
+    <Match>
+        <Or>
+            <!-- all classes named '*Api' or '*Ctrl' are known to be Spring endpoints and should not be reported -->
+            <Class name="~.*Api"/>
+            <Class name="~.*Ctrl"/>
+        </Or>
+        <Bug pattern="SPRING_ENDPOINT"/>
+    </Match>
+
+    <Match>
+        <!-- it's okay to store Tor objects as field -->
+        <Field name="tor" type="org.berndpruenster.netlayer.tor.Tor" />
+        <Bug pattern="EI_EXPOSE_REP2"/>
+    </Match>
+
 </FindBugsFilter>
