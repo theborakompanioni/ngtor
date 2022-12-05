@@ -256,7 +256,6 @@ subprojects {
         reportsDir = rootProject.file("$rootProject.buildDir/reports/spotbugs/$project.name")
     }
     spotbugsMain {
-        onlyIf { gradle.taskGraph.hasTask('build') }
         reports {
             xml.required = false
             html.required = true
@@ -271,7 +270,6 @@ subprojects {
         reportsDir = rootProject.file("$rootProject.buildDir/reports/checkstyle/$project.name")
     }
     tasks.withType(Checkstyle) {
-        onlyIf { gradle.taskGraph.hasTask('build') }
         reports {
             xml.required = false
             html.required = true
