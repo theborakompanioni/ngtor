@@ -1,3 +1,5 @@
+[![Build](https://github.com/theborakompanioni/ngtor/actions/workflows/build.yml/badge.svg)](https://github.com/theborakompanioni/ngtor/actions/workflows/build.yml)
+[![License](https://img.shields.io/github/license/theborakompanioni/ngtor.svg?maxAge=2592000)](https://github.com/theborakompanioni/ngtor/blob/master/LICENSE)
 
 
 <p align="center">
@@ -167,7 +169,6 @@ See [Awesome Tunneling](https://github.com/anderspitman/awesome-tunneling) by [@
 
 
 ## Resources
-
 - Tor: https://www.torproject.org/
 - Spring Boot (GitHub): https://github.com/spring-projects/spring-boot
 ---
@@ -177,5 +178,5 @@ See [Awesome Tunneling](https://github.com/anderspitman/awesome-tunneling) by [@
 
 
 ## License
-
 The project is licensed under the Apache License. See [LICENSE](LICENSE) for details.
+
