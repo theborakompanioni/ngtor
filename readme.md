@@ -29,8 +29,8 @@ Easily expose local services via Tor
 
 
 ## Install
-[Download](https://jitpack.io/#theborakompanioni/ngtor) from Jitpack.
-
+[Download from GitHub releases](https://github.com/theborakompanioni/ngtor/releases) or
+[from Jitpack](https://jitpack.io/#theborakompanioni/ngtor).
 
 ## Commands
 
@@ -38,7 +38,7 @@ Easily expose local services via Tor
 Serve the specified port via Tor (default is `8080`).
 
 ```shell script
-$ ngtor.jar http --port=3000
+$ ./ngtor.jar http --port=3000
 ```
 ```
 Setting up hidden service 'ngtor_main' for port 3000
@@ -49,7 +49,7 @@ Setting up hidden service 'ngtor_main' for port 3000
 Spin up a webserver and serve a demo page via tor.
 
 ```shell script
-$ ngtor.jar demo
+$ ./ngtor.jar demo
 ```
 ```
 2009-01-03 22:00:10.937  INFO [...] : Starting NgtorApplication v0.1.0-dev
@@ -72,7 +72,7 @@ $ ngtor.jar demo
 Performs some health checks, e.g. if outbound connection via Tor can be established.
 
 ```shell script
-$ ngtor.jar check
+$ ./ngtor.jar check
 ```
 ```
 Check started..
@@ -84,7 +84,7 @@ Check finished after 1.452 s
 Print help text.
 
 ```shell script
-$ ngtor.jar help
+$ ./ngtor.jar help
 ```
 ```
 Usage: ./ngtor.jar COMMAND [OPTION...]
