@@ -4,7 +4,6 @@ description = 'tor example application package'
 
 bootJar {
     archiveBaseName.set('ngtor')
-    archiveClassifier.set('')
 }
 
 dependencies {
