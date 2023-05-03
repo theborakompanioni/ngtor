@@ -39,3 +39,5 @@ org.tbk.tor:
   auto-publish-enabled: false # default is `true` (will be adapted programmatically on-demand)
   working-directory: '${app.home}/tor-working-dir' # default is `tor-working-dir`
   startup-timeout: 30s # default is `60s`
+  onion-location-header:
+    allow-on-localhost-http: true
