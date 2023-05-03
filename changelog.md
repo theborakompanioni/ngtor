@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Breaking
 - upgrade: update java from v11 to v17
-- upgrade: update spring-tor from v0.5.0 to v0.7.0
+- upgrade: update spring-tor from v0.5.0 to v0.8.0
 - upgrade: update spring-boot from v2.7.5 to v3.0.6
 
 ### Fixed
