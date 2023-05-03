@@ -1,4 +1,5 @@
 [![Build](https://github.com/theborakompanioni/ngtor/actions/workflows/build.yml/badge.svg)](https://github.com/theborakompanioni/ngtor/actions/workflows/build.yml)
+[![GitHub Release](https://img.shields.io/github/release/theborakompanioni/ngtor.svg?maxAge=3600)](https://github.com/theborakompanioni/ngtor/releases/latest)
 [![License](https://img.shields.io/github/license/theborakompanioni/ngtor.svg?maxAge=2592000)](https://github.com/theborakompanioni/ngtor/blob/master/LICENSE)
 
 
@@ -29,8 +30,12 @@ Easily expose local services via Tor
 
 
 ## Install
-[Download from GitHub releases](https://github.com/theborakompanioni/ngtor/releases) or
+[Download from GitHub releases](https://github.com/theborakompanioni/ngtor/releases/latest) or
 [from Jitpack](https://jitpack.io/#theborakompanioni/ngtor).
+
+### Requirements
+- java >=17
+
 
 ## Commands
 
@@ -106,9 +111,6 @@ Usage: ./ngtor.jar COMMAND [OPTION...]
 
 
 ## Development
-
-### Requirements
-- java >=17
 
 ### Build
 ```shell script
