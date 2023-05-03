@@ -23,5 +23,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - upgrade: update nebula release plugin from v15.3.1 to v17.1.0
 - upgrade: update nebula project plugin from v9.6.3 to v10.0.1
 - upgrade: update checkstyle from v8.44 to v10.3.4
+- upgrade: update lombok from v1.18.20 to v1.18.26
 
 ### Removed

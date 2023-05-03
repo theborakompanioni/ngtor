@@ -1,7 +1,7 @@
 ext {
     torSpringBootStarterVersion = '0.7.0'
     guavaVersion = '30.1-jre'
-    lombokVersion = '1.18.20'
+    lombokVersion = '1.18.26'
     checkstyleVersion = '10.3.4'
     findsecbugsPluginVersion = '1.12.0'
     springBootGradlePluginVersion = '3.0.6'
