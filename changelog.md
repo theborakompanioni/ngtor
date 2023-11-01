@@ -6,6 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+- upgrade: update spring-boot from v3.0.6 to v3.1.5
+
 ## [0.1.0] - 2023-05-03
 ### Added
 
