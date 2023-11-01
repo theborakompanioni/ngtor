@@ -129,6 +129,8 @@ subprojects {
     }
 
     sourcesJar {
+        duplicatesStrategy DuplicatesStrategy.EXCLUDE
+
         archiveClassifier.set('sources')
         from sourceSets.main.java
     }
