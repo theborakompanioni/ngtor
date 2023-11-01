@@ -21,28 +21,27 @@ jobs:
     needs: validation
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        java-version: [ 17, 18, 21 ]
+
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3
 
-      - name: Setup JDK 17
+      - name: Setup JDK
         uses: actions/setup-java@v3
         with:
           distribution: 'adopt'
-          java-version: '17'
+          java-version: ${{ matrix.java-version }}
 
       - name: Print Java Version
         run: java --version
 
-      - name: Cache Gradle Packages
-        uses: actions/cache@v3
+      - name: Setup Gradle
+        uses: gradle/gradle-build-action@v2
         with:
-          path: |
-            ~/.gradle/caches
-            ~/.gradle/wrapper
-          key: ${{ runner.os }}-gradle-${{ secrets.CACHE_VERSION }}-${{ hashFiles('versions.gradle', '**/gradle.properties', '**/*.gradle*', '**/gradle-wrapper.properties') }}
-          restore-keys: |
-            ${{ runner.os }}-gradle-${{ secrets.CACHE_VERSION }}
+          cache-read-only: ${{ github.ref != 'refs/heads/master' && github.ref != 'refs/heads/devel' }}
 
       - name: Lint Gradle File
         run: ./gradlew autoLintGradle
@@ -58,8 +57,8 @@ jobs:
 
       - name: Build tag
         if: |
-          startsWith(github.ref, 'refs/tags/')
-        run: ./gradlew -Prelease.useLastTag=true bootJar
+          startsWith(github.ref, 'refs/tags/v')
+        run: ./gradlew --info --stacktrace -Prelease.useLastTag=true bootJar
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v3
@@ -68,10 +67,3 @@ jobs:
         with:
           path: ./**/ngtor-app/build/libs/*-boot.jar
           if-no-files-found: error
-
-      - name: Cleanup Gradle Cache
-        # Remove some files from the Gradle cache, so they aren't cached by GitHub Actions.
-        # Restoring these files from a GitHub Actions cache might cause problems for future builds.
-        run: |
-          rm -f ~/.gradle/caches/modules-2/modules-2.lock
-          rm -f ~/.gradle/caches/modules-2/gc.properties
