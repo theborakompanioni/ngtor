@@ -198,7 +198,10 @@
             <trusting group="org.apache.commons"/>
          </trusted-key>
          <trusted-key id="bcfafcdcfba4061f1f6027c6cc85d9cc1857229b" group="org.seleniumhq.selenium" name="selenium-bom" version="4.19.1"/>
-         <trusted-key id="bdb5fa4fe719d787fb3d3197f6d4a1d411e9d1ae" group="com.google.guava"/>
+         <trusted-key id="bdb5fa4fe719d787fb3d3197f6d4a1d411e9d1ae">
+            <trusting group="com.google.guava"/>
+            <trusting group="com.google.j2objc" name="j2objc-annotations" version="3.0.0"/>
+         </trusted-key>
          <trusted-key id="be685132afd2740d9095f9040cc0b712fee75827" group="org.assertj"/>
          <trusted-key id="c663d2f64da2ca09db28d9abd3fa67d522c55256" group="org.apache.pulsar" name="pulsar-bom" version="3.2.4"/>
          <trusted-key id="c7be5bcc9fec15518cfda882b0f3710fa64900e7" group="com.google.code.gson"/>
@@ -244,6 +247,7 @@
             <trusting group="org.jetbrains.kotlinx" name="kotlinx-coroutines-bom" version="1.6.4"/>
          </trusted-key>
          <trusted-key id="e85aed155021af8a6c6b7a4a7c7d8456294423ba" group="org.objenesis"/>
+         <trusted-key id="ee0ca873074092f806f59b65d364abaa39a47320" group="com.google.errorprone"/>
          <trusted-key id="ef6ad6684034b0cb67a9b5714406b84c1661dcd1" group="org.springframework.data" name="spring-data-bom" version="2022.0.0"/>
          <trusted-key id="f046369b06b761ac86d9849f71b329993bffcfdd" group="com.oracle.database.jdbc" name="ojdbc-bom" version="21.9.0.0"/>
          <trusted-key id="f254b35617dc255d9344bcfa873a8e86b4372146">

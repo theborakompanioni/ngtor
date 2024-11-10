@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 - upgrade: update spring-boot from v3.0.6 to v3.3.5
+- upgrade: update guava from v30.1 to v33.3.1
 
 ## [0.1.0] - 2023-05-03
 ### Added
