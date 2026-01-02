@@ -15,9 +15,9 @@ buildscript {
 
 plugins {
     id 'idea'
-    id 'nebula.release' version '17.2.2'
-    id 'nebula.lint' version '18.1.0'
-    id 'com.netflix.nebula.project' version '10.1.5'
+    id 'nebula.release' version '19.0.10'
+    id 'nebula.lint' version '20.6.2'
+    id 'com.netflix.nebula.project' version '13.0.0'
     id 'com.github.spotbugs' version '5.2.1' apply false
     id 'org.springframework.boot' version "$springBootGradlePluginVersion" apply false
     id 'io.franzbecker.gradle-lombok' version '5.0.0' apply false
