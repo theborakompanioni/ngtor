@@ -93,6 +93,7 @@
             <trusting group="io.opentelemetry" name="opentelemetry-bom" version="1.37.0"/>
          </trusted-key>
          <trusted-key id="3f2a008a91d11a7fac4a0786f13d3e721d56bd54" group="org.reflections" name="reflections" version="0.10.2"/>
+         <trusted-key id="41cd49b4ef5876f9e9f691dabac30622339994c4" group="org.jspecify" name="jspecify" version="0.3.0"/>
          <trusted-key id="41d266db4427983a1a4afb0c3684155e9365c30e">
             <trusting group="com.jayway.jsonpath" name="json-path" version="2.7.0"/>
             <trusting group="com.jayway.jsonpath" name="json-path" version="2.8.0"/>
@@ -151,6 +152,7 @@
          <trusted-key id="798e2da37e70dae0ea9e498ca388c395aafb80f8" group="io.dropwizard.metrics"/>
          <trusted-key id="7a1d848e7c2af85eeba69c99e7bf252cf360097e" group="org.latencyutils" name="LatencyUtils" version="2.0.3"/>
          <trusted-key id="7c669810892cbd3148fa92995b05ccde140c2876" group="org.eclipse.jgit"/>
+         <trusted-key id="7e22d50a7ebd9d2cd269b2d4056aca74d46000bf" group="io.netty" name="netty-bom" version="4.1.114.Final"/>
          <trusted-key id="808d78b17a5a2d7c3668e31fbffc9b54721244ad" group="org.apache.commons" name="commons-parent" version="39"/>
          <trusted-key id="80f6d6b0d90c6747753344cab5a9e81b565e89e0" group="org.tomlj" name="tomlj" version="1.0.0"/>
          <trusted-key id="81be0c38ace8aedc7735a05f4c2aff633f3a7223" group="org.seleniumhq.selenium" name="selenium-bom" version="4.8.3"/>
@@ -203,6 +205,7 @@
             <trusting group="com.google.j2objc" name="j2objc-annotations" version="3.0.0"/>
          </trusted-key>
          <trusted-key id="be685132afd2740d9095f9040cc0b712fee75827" group="org.assertj"/>
+         <trusted-key id="c3259d20daec4ace6d57cc83340b090f727518d8" group="com.google.j2objc" name="j2objc-annotations" version="3.1"/>
          <trusted-key id="c663d2f64da2ca09db28d9abd3fa67d522c55256" group="org.apache.pulsar" name="pulsar-bom" version="3.2.4"/>
          <trusted-key id="c7be5bcc9fec15518cfda882b0f3710fa64900e7" group="com.google.code.gson"/>
          <trusted-key id="c89074fc8be681b7c7eaab6e4c5eed3c53b75933">
@@ -224,6 +227,7 @@
          <trusted-key id="d421d1df4570bfb13e485d0bf95add0a28d2f139">
             <trusting group="org.projectlombok" name="lombok" version="1.18.30"/>
             <trusting group="org.projectlombok" name="lombok" version="1.18.34"/>
+            <trusting group="org.projectlombok" name="lombok" version="1.18.42"/>
          </trusted-key>
          <trusted-key id="d54a395b5cf3f86eb45f6e426b1b008864323b92" group="org.antlr"/>
          <trusted-key id="d6f1bc78607808ec8e9f69437a8860944fad5f62" group="org.apache.commons" name="commons-parent" version="34"/>
