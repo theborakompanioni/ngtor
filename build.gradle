@@ -1,4 +1,3 @@
-import io.franzbecker.gradle.lombok.task.DelombokTask
 import org.gradle.api.tasks.testing.logging.TestExceptionFormat
 import org.gradle.api.tasks.testing.logging.TestLogEvent
 import org.springframework.boot.gradle.plugin.SpringBootPlugin
@@ -20,7 +19,7 @@ plugins {
     id 'com.netflix.nebula.project' version '13.0.0'
     id 'com.github.spotbugs' version '5.2.1' apply false
     id 'org.springframework.boot' version "$springBootGradlePluginVersion" apply false
-    id 'io.franzbecker.gradle-lombok' version '5.0.0' apply false
+    id 'io.freefair.lombok' version '9.1.0' apply false
 }
 
 contacts {
@@ -84,7 +83,7 @@ subprojects {
     apply plugin: 'com.netflix.nebula.project'
     apply plugin: 'com.netflix.nebula.info'
     apply plugin: 'com.netflix.nebula.integtest-standalone'
-    apply plugin: 'io.franzbecker.gradle-lombok'
+    apply plugin: 'io.freefair.lombok'
     apply plugin: 'io.spring.dependency-management'
 
     java {
@@ -207,7 +206,6 @@ subprojects {
 
     lombok {
         version = "${lombokVersion}"
-        sha256 = null // skip verifyLombok task - will be done by gradle dependency verification
     }
 
     tasks.withType(Test) {
@@ -232,27 +230,16 @@ subprojects {
 
     task dependencyTree(type: DependencyReportTask) {}
 
-    task delombok(type: DelombokTask, dependsOn: compileJava) {
-        def srcDirs = sourceSets.main.java.srcDirs.findAll { it.exists() }
-
-        enabled = subprojects.isEmpty() && !srcDirs.isEmpty()
-
-        ext.outputDir = file("$buildDir/delombok")
-        outputs.dir(outputDir)
-        srcDirs.each {
-            inputs.dir(it)
-            args(it, "-d", outputDir)
-        }
-
-        doFirst {
-            outputDir.deleteDir()
-        }
-    }
-
     javadoc {
-        dependsOn delombok
-        source = delombok.outputDir
-        failOnError = false
+        // Note: `source = delombok` is applied by plugin 'io.freefair.lombok' automatically
+        failOnError = true
+        options {
+            tags = [
+                    'apiNote:a:API Note:',
+                    'implSpec:a:Implementation Requirements:',
+                    'implNote:a:Implementation Note:'
+            ]
+        }
     }
 
     spotbugs {
