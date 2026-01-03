@@ -34,7 +34,7 @@ Easily expose local services via Tor
 [from Jitpack](https://jitpack.io/#theborakompanioni/ngtor).
 
 ### Requirements
-- java >=17
+- java >=21
 
 
 ## Commands
