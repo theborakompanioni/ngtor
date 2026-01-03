@@ -1,6 +1,6 @@
 apply plugin: 'org.springframework.boot'
 
-description = 'tor example application package'
+description = 'ngtor application package'
 
 bootJar {
     archiveBaseName.set('ngtor')

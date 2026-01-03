@@ -6,10 +6,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.0] - 2026-01-03
+
 ### Changed
-- upgrade: update spring-boot from v3.0.6 to v3.3.5
-- upgrade: update guava from v30.1 to v33.3.1
-- upgrade: update spring-tor from v0.8.0 to v0.9.0
+- upgrade: update spring-boot from v3.0.6 to v3.5.9
+- upgrade: update guava from v30.1 to v33.5.0
+- upgrade: update spring-tor from v0.8.0 to v0.10.0
+- upgrade: update java from v17 to v21
 
 ## [0.1.0] - 2023-05-03
 ### Added
@@ -33,5 +36,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - upgrade: update lombok from v1.18.20 to v1.18.26
 
 ### Removed
-
+[Unreleased]: https://github.com/theborakompanioni/ngtor/compare/0.2.0...HEAD
+[0.2.0]: https://github.com/theborakompanioni/ngtor/compare/0.1.0...0.2.0
 [0.1.0]: https://github.com/theborakompanioni/ngtor/releases/tag/0.1.0
