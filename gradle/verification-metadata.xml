@@ -20,7 +20,10 @@
             <trusting group="org.glassfish.jaxb" name="jaxb-bom" version="4.0.3"/>
             <trusting group="org.glassfish.jaxb" name="jaxb-bom" version="4.0.5"/>
          </trusted-key>
-         <trusted-key id="06D34ED6FF73DE368A772A781063FE98BCECB758" group="com.puppycrawl.tools" name="checkstyle" version="10.3.4"/>
+         <trusted-key id="06D34ED6FF73DE368A772A781063FE98BCECB758">
+            <trusting group="com.puppycrawl.tools" name="checkstyle" version="10.26.1"/>
+            <trusting group="com.puppycrawl.tools" name="checkstyle" version="10.3.4"/>
+         </trusted-key>
          <trusted-key id="077E8893A6DCC33DD4A4D5B256E73BA9A0B592D0" group="^org[.]apache[.]logging($|([.].*))" regex="true"/>
          <trusted-key id="0785B3EFF60B1B1BEA94E0BB7C25280EAE63EBE5" group="^org[.]apache[.]httpcomponents($|([.].*))" regex="true"/>
          <trusted-key id="07E20F0103D9DFC697C490D0368557390486F2C5">
@@ -60,6 +63,7 @@
          <trusted-key id="19BEAB2D799C020F17C69126B16698A4ADF4D638" group="org.checkerframework" name="checker-qual"/>
          <trusted-key id="1AA8CF92D409A73393D0B736BFF2EE42C8282E76" group="org.apache.activemq" name="activemq-bom" version="6.1.3"/>
          <trusted-key id="1D04A424F505394DBED15D451D0690E353BE126D" group="net.minidev"/>
+         <trusted-key id="223D3A74B068ECA354DC385CE126833F9CF64915" group="org.apache.xbean"/>
          <trusted-key id="2518174F4111F02779592A6F9757D7E7E06DD2AC" group="io.prometheus"/>
          <trusted-key id="2655176F748FD83725B4805FF2A01147D830C125">
             <trusting group="org.testcontainers" name="testcontainers-bom" version="1.18.3"/>
@@ -68,6 +72,7 @@
          <trusted-key id="28118C070CB22A0175A2E8D43D12CA2AC19F3181" group="^com[.]fasterxml($|([.].*))" regex="true"/>
          <trusted-key id="2B34821418CF19CF1F2A8352953E02E4F573B46F" group="jakarta.platform"/>
          <trusted-key id="2DB4F1EF0FA761ECC4EA935C86FDC7E2A11262CB">
+            <trusting group="commons-beanutils" name="commons-beanutils" version="1.11.0"/>
             <trusting group="commons-codec"/>
             <trusting group="commons-io" name="commons-io" version="2.20.0"/>
             <trusting group="org.apache.bcel"/>
@@ -173,6 +178,7 @@
             <trusting group="com.github.spotbugs"/>
             <trusting group="com.github.spotbugs.snom" name="spotbugs-gradle-plugin" version="5.2.1"/>
          </trusted-key>
+         <trusted-key id="998AF0E2B935996F5CEBD56B9B1FDA9F3C062231" group="org.apache" name="apache" version="6"/>
          <trusted-key id="9B32CBC0F3F6BA4C13D611FC21871D2A9AB66A31" group="io.rsocket" name="rsocket-bom" version="1.1.3"/>
          <trusted-key id="9D0A56AAA0D60E0C0C7DCCC0B4C70893B62BABE8" group="org.apache.logging" name="logging-parent" version="5"/>
          <trusted-key id="A413F67D71BEEC23ADD0CE0ACB43338E060CF9FA" group="org.jacoco"/>
@@ -180,17 +186,22 @@
             <trusting group="io.fabric8" name="kubernetes-client-bom" version="5.12.2"/>
             <trusting group="io.fabric8" name="kubernetes-client-bom" version="5.12.4"/>
          </trusted-key>
+         <trusted-key id="A48FADE54FA56B93FE66EC17A05EBEE656F3E01B" group="org.apache.geronimo.genesis"/>
          <trusted-key id="A5BD02B93E7A40482EB1D66A5F69AD087600B22C" group="org.ow2.asm"/>
          <trusted-key id="A6D6C97108B8585F91B158748671A8DF71296252" group="^com[.]squareup($|([.].*))" regex="true"/>
          <trusted-key id="A7892505CF1A58076453E52D7999BEFBA1039E8B" group="net.bytebuddy"/>
          <trusted-key id="A9C5DF4D22E99998D9875A5110C01C5A2F6059E7" group="org.apache.tomcat.embed"/>
-         <trusted-key id="AA417737BD805456DB3CBDDE6601E5C08DCCBB96" group="info.picocli" name="picocli" version="4.6.3"/>
+         <trusted-key id="AA417737BD805456DB3CBDDE6601E5C08DCCBB96">
+            <trusting group="info.picocli" name="picocli" version="4.6.3"/>
+            <trusting group="info.picocli" name="picocli" version="4.7.7"/>
+         </trusted-key>
          <trusted-key id="AA70C7C433D501636392EC02153E7A3C2B4E5118">
             <trusting group="org.eclipse.ee4j" name="project" version="1.0.6"/>
             <trusting group="org.eclipse.ee4j" name="project" version="1.0.7"/>
             <trusting group="org.eclipse.ee4j" name="project" version="1.0.8"/>
             <trusting group="org.eclipse.ee4j" name="project" version="1.0.9"/>
          </trusted-key>
+         <trusted-key id="B02137D875D833D9B23392ECAE5A7FB608A0221C" group="org.codehaus.plexus" name="plexus-classworlds" version="2.6.0"/>
          <trusted-key id="B2D1AC7BE5A3EEB9773A49FE6EB9DE4D7E01B1E1" group="org.antlr"/>
          <trusted-key id="B41089A2DA79B0FA5810252872385FF0AF338D52" group="joda-time" name="joda-time" version="2.10"/>
          <trusted-key id="B6E73D84EA4FCC47166087253FAAD2CD5ECBB314">
