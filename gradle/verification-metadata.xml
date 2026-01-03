@@ -19,6 +19,7 @@
             <trusting group="org.glassfish.jaxb" name="jaxb-bom" version="4.0.2"/>
             <trusting group="org.glassfish.jaxb" name="jaxb-bom" version="4.0.3"/>
             <trusting group="org.glassfish.jaxb" name="jaxb-bom" version="4.0.5"/>
+            <trusting group="org.glassfish.jaxb" name="jaxb-bom" version="4.0.6"/>
          </trusted-key>
          <trusted-key id="06D34ED6FF73DE368A772A781063FE98BCECB758">
             <trusting group="com.puppycrawl.tools" name="checkstyle" version="10.26.1"/>
@@ -36,6 +37,7 @@
          <trusted-key id="0B743A794876D3C78AB542A118D239B1CBCD2236">
             <trusting group="org.glassfish.jersey" name="jersey-bom" version="3.1.0"/>
             <trusting group="org.glassfish.jersey" name="jersey-bom" version="3.1.1"/>
+            <trusting group="org.glassfish.jersey" name="jersey-bom" version="3.1.11"/>
             <trusting group="org.glassfish.jersey" name="jersey-bom" version="3.1.3"/>
             <trusting group="org.glassfish.jersey" name="jersey-bom" version="3.1.9"/>
          </trusted-key>
@@ -61,7 +63,11 @@
          <trusted-key id="144219B604DDE6A2383FA0EE9C6404EBCE3E4464" group="com.github.zafarkhaja" name="java-semver" version="0.9.0"/>
          <trusted-key id="147B691A19097624902F4EA9689CBE64F4BC997F" group="org.mockito"/>
          <trusted-key id="19BEAB2D799C020F17C69126B16698A4ADF4D638" group="org.checkerframework" name="checker-qual"/>
-         <trusted-key id="1AA8CF92D409A73393D0B736BFF2EE42C8282E76" group="org.apache.activemq" name="activemq-bom" version="6.1.3"/>
+         <trusted-key id="1A75005E142192223D6A7C3B76E0008D166740A8" group="org.mongodb" name="mongodb-driver-bom" version="5.5.2"/>
+         <trusted-key id="1AA8CF92D409A73393D0B736BFF2EE42C8282E76">
+            <trusting group="org.apache.activemq" name="activemq-bom" version="6.1.3"/>
+            <trusting group="org.apache.activemq" name="activemq-bom" version="6.1.8"/>
+         </trusted-key>
          <trusted-key id="1D04A424F505394DBED15D451D0690E353BE126D" group="net.minidev"/>
          <trusted-key id="223D3A74B068ECA354DC385CE126833F9CF64915" group="org.apache.xbean"/>
          <trusted-key id="2518174F4111F02779592A6F9757D7E7E06DD2AC" group="io.prometheus"/>
@@ -70,10 +76,12 @@
             <trusting group="org.testcontainers" name="testcontainers-bom" version="1.19.8"/>
          </trusted-key>
          <trusted-key id="28118C070CB22A0175A2E8D43D12CA2AC19F3181" group="^com[.]fasterxml($|([.].*))" regex="true"/>
+         <trusted-key id="28417C95E8906D108392822354A43F3254868410" group="org.apache.activemq"/>
          <trusted-key id="2B34821418CF19CF1F2A8352953E02E4F573B46F" group="jakarta.platform"/>
          <trusted-key id="2DB4F1EF0FA761ECC4EA935C86FDC7E2A11262CB">
             <trusting group="commons-beanutils" name="commons-beanutils" version="1.11.0"/>
             <trusting group="commons-codec"/>
+            <trusting group="commons-io" name="commons-io" version="2.16.1"/>
             <trusting group="commons-io" name="commons-io" version="2.20.0"/>
             <trusting group="org.apache.bcel"/>
             <trusting group="org.apache.commons"/>
@@ -82,6 +90,7 @@
          <trusted-key id="2DC48CBB4352B4953AF6F803D433B437192A0FD1" group="com.datastax.oss" name="java-driver-bom" version="4.15.0"/>
          <trusted-key id="2E3A1AFFE42B5F53AF19F780BCF4173966770193" group="org.jetbrains" name="annotations" version="13.0"/>
          <trusted-key id="2F39E2A1EB9BC4E78F403B22F6BC09712C8DF6EC" group="net.minidev"/>
+         <trusted-key id="2FC53E6B1F681184F4CCD637F5C81DE10A0B8ECC" group="org.yaml" name="snakeyaml" version="2.4"/>
          <trusted-key id="3262A061C42FC4C7BBB5C25C1CF0293FA53CA458" group="org.apache.tomcat.embed"/>
          <trusted-key id="34441E504A937F43EB0DAEF96A65176A0FB1CD0B">
             <trusting group="org.apache.groovy"/>
@@ -98,9 +107,13 @@
             <trusting group="io.opentelemetry" name="opentelemetry-bom" version="1.19.0"/>
             <trusting group="io.opentelemetry" name="opentelemetry-bom" version="1.25.0"/>
             <trusting group="io.opentelemetry" name="opentelemetry-bom" version="1.37.0"/>
+            <trusting group="^io[.]opentelemetry($|([.].*))" regex="true"/>
          </trusted-key>
          <trusted-key id="3F2A008A91D11A7FAC4A0786F13D3E721D56BD54" group="org.reflections" name="reflections" version="0.10.2"/>
-         <trusted-key id="41CD49B4EF5876F9E9F691DABAC30622339994C4" group="org.jspecify" name="jspecify" version="0.3.0"/>
+         <trusted-key id="41CD49B4EF5876F9E9F691DABAC30622339994C4">
+            <trusting group="org.jspecify" name="jspecify" version="0.3.0"/>
+            <trusting group="org.jspecify" name="jspecify" version="1.0.0"/>
+         </trusted-key>
          <trusted-key id="41D266DB4427983A1A4AFB0C3684155E9365C30E">
             <trusting group="com.jayway.jsonpath" name="json-path" version="2.7.0"/>
             <trusting group="com.jayway.jsonpath" name="json-path" version="2.8.0"/>
@@ -114,9 +127,13 @@
             <trusting group="io.projectreactor"/>
             <trusting group="io.spring.gradle" name="dependency-management-plugin" version="1.1.3"/>
             <trusting group="io.spring.gradle" name="dependency-management-plugin" version="1.1.6"/>
+            <trusting group="io.spring.gradle" name="dependency-management-plugin" version="1.1.7"/>
             <trusting group="^org[.]springframework($|([.].*))" regex="true"/>
          </trusted-key>
-         <trusted-key id="498AAC354AA5CB36FAAB7608B6E83A2D2E447E56" group="org.apache.cassandra" name="java-driver-bom" version="4.18.1"/>
+         <trusted-key id="498AAC354AA5CB36FAAB7608B6E83A2D2E447E56">
+            <trusting group="org.apache.cassandra" name="java-driver-bom" version="4.18.1"/>
+            <trusting group="org.apache.cassandra" name="java-driver-bom" version="4.19.2"/>
+         </trusted-key>
          <trusted-key id="4C5F68D09D42BA7FAC888DF9A929EA2321FDBF8F">
             <trusting group="net.sf.saxon"/>
             <trusting group="org.xmlresolver"/>
@@ -137,6 +154,7 @@
             <trusting group="org.eclipse.jetty" name="jetty-bom"/>
             <trusting group="org.eclipse.jetty" name="jetty-bom" version="11.0.15"/>
             <trusting group="org.eclipse.jetty.ee10" name="jetty-ee10-bom" version="12.0.14"/>
+            <trusting group="org.eclipse.jetty.ee10" name="jetty-ee10-bom" version="12.0.31"/>
          </trusted-key>
          <trusted-key id="59A8E169739301FD48139CA00E325BECB6962A24" group="jakarta.annotation" name="jakarta.annotation-api" version="2.1.1"/>
          <trusted-key id="60200AC4AE761F1614D6C46766D68DAA073BE985">
@@ -147,12 +165,15 @@
          <trusted-key id="679FB0162ABE057603E69E4527869A59AF13CA69" group="com.netflix.nebula"/>
          <trusted-key id="694621A7227D8D5289699830ABE9F3126BB741C1" group="com.google.guava"/>
          <trusted-key id="6A814B1F869C2BBEAB7CB7271A2A1C94BDE89688" group="^org[.]apache($|([.].*))" regex="true"/>
+         <trusted-key id="6A93161EB1990E8346E7BA2B23738DFD7C40DE43" group="org.xmlunit"/>
          <trusted-key id="6DD3B8C64EF75253BEB2C53AD908A43FB7EC07AC">
             <trusting group="jakarta.activation" name="jakarta.activation-api" version="2.1.0"/>
             <trusting group="jakarta.activation" name="jakarta.activation-api" version="2.1.1"/>
             <trusting group="jakarta.activation" name="jakarta.activation-api" version="2.1.2"/>
             <trusting group="jakarta.activation" name="jakarta.activation-api" version="2.1.3"/>
+            <trusting group="jakarta.activation" name="jakarta.activation-api" version="2.1.4"/>
          </trusted-key>
+         <trusted-key id="6E7F910017655622A899639EE7D88DB8427DE651" group="org.testcontainers" name="testcontainers-bom" version="1.21.4"/>
          <trusted-key id="6F538074CCEBF35F28AF9B066A0975F8B1127B83" group="org.jetbrains.kotlin"/>
          <trusted-key id="7615AD56144DF2376F49D98B1669C4BB543E0445" group="com.google.errorprone"/>
          <trusted-key id="7616EB882DAF57A11477AAF559A252FB1199D873" group="com.google.code.findbugs" name="jsr305" version="3.0.2"/>
@@ -179,7 +200,10 @@
             <trusting group="com.github.spotbugs.snom" name="spotbugs-gradle-plugin" version="5.2.1"/>
          </trusted-key>
          <trusted-key id="998AF0E2B935996F5CEBD56B9B1FDA9F3C062231" group="org.apache" name="apache" version="6"/>
-         <trusted-key id="9B32CBC0F3F6BA4C13D611FC21871D2A9AB66A31" group="io.rsocket" name="rsocket-bom" version="1.1.3"/>
+         <trusted-key id="9B32CBC0F3F6BA4C13D611FC21871D2A9AB66A31">
+            <trusting group="io.rsocket" name="rsocket-bom" version="1.1.3"/>
+            <trusting group="io.rsocket" name="rsocket-bom" version="1.1.5"/>
+         </trusted-key>
          <trusted-key id="9D0A56AAA0D60E0C0C7DCCC0B4C70893B62BABE8" group="org.apache.logging" name="logging-parent" version="5"/>
          <trusted-key id="A413F67D71BEEC23ADD0CE0ACB43338E060CF9FA" group="org.jacoco"/>
          <trusted-key id="A42FEF087AF29AE864684EAEE6039456D5BBD4F8">
@@ -209,6 +233,7 @@
             <trusting group="org.apache.commons"/>
          </trusted-key>
          <trusted-key id="B801E2F8EF035068EC1139CC29579F18FA8FD93B" group="com.google.j2objc" name="j2objc-annotations" version="1.3"/>
+         <trusted-key id="B8CC3E35FFE7FD1BE776F15EA500607F1E9C0457" group="org.apache.pulsar" name="pulsar-client-reactive-bom" version="0.6.0"/>
          <trusted-key id="BC87A3FD0A54480F0BADBEBD21939FF0CA2A6567">
             <trusting group="commons-codec"/>
             <trusting group="org.apache.commons"/>
@@ -220,7 +245,10 @@
          </trusted-key>
          <trusted-key id="BE685132AFD2740D9095F9040CC0B712FEE75827" group="org.assertj"/>
          <trusted-key id="C3259D20DAEC4ACE6D57CC83340B090F727518D8" group="com.google.j2objc" name="j2objc-annotations" version="3.1"/>
-         <trusted-key id="C663D2F64DA2CA09DB28D9ABD3FA67D522C55256" group="org.apache.pulsar" name="pulsar-bom" version="3.2.4"/>
+         <trusted-key id="C663D2F64DA2CA09DB28D9ABD3FA67D522C55256">
+            <trusting group="org.apache.pulsar" name="pulsar-bom" version="3.2.4"/>
+            <trusting group="org.apache.pulsar" name="pulsar-bom" version="4.0.8"/>
+         </trusted-key>
          <trusted-key id="C7BE5BCC9FEC15518CFDA882B0F3710FA64900E7" group="com.google.code.gson"/>
          <trusted-key id="C89074FC8BE681B7C7EAAB6E4C5EED3C53B75933">
             <trusting group="org.skyscreamer" name="jsonassert" version="1.5.1"/>
@@ -257,9 +285,13 @@
             <trusting group="io.spring.gradle"/>
             <trusting group="^org[.]springframework($|([.].*))" regex="true"/>
          </trusted-key>
-         <trusted-key id="E3A9F95079E84CE201F7CF60BEDE11EAF1164480" group="org.hamcrest" name="hamcrest" version="2.2"/>
+         <trusted-key id="E3A9F95079E84CE201F7CF60BEDE11EAF1164480">
+            <trusting group="org.hamcrest" name="hamcrest" version="2.2"/>
+            <trusting group="org.hamcrest" name="hamcrest" version="3.0"/>
+         </trusted-key>
          <trusted-key id="E52567D2589415BD74EB4C2867631BC0568801C3" group="io.github.microutils" name="kotlin-logging" version="1.5.4"/>
          <trusted-key id="E5C3B1929191DF06136CCB2B164779204E106A76" group="org.javassist" name="javassist" version="3.28.0-GA"/>
+         <trusted-key id="E74BC778A315F77D0E89E42FEE5F0C3805A24B16" group="io.prometheus"/>
          <trusted-key id="E77417AC194160A3FABD04969A259C7EE636C5ED" group="com.google.errorprone"/>
          <trusted-key id="E7DC75FC24FB3C8DFE8086AD3D5839A2262CBBFB">
             <trusting group="org.jetbrains.kotlinx"/>
@@ -270,6 +302,7 @@
          <trusted-key id="EF6AD6684034B0CB67A9B5714406B84C1661DCD1" group="org.springframework.data" name="spring-data-bom" version="2022.0.0"/>
          <trusted-key id="F046369B06B761AC86D9849F71B329993BFFCFDD" group="com.oracle.database.jdbc" name="ojdbc-bom" version="21.9.0.0"/>
          <trusted-key id="F0C6F963AE4C1E0465E5EF4B2E55C136C4729D19" group="^io[.]freefair($|([.].*))" regex="true"/>
+         <trusted-key id="F23E6F40ED06B8E0B269523C0DE2A6EBAF6DB53F" group="org.seleniumhq.selenium" name="selenium-bom" version="4.31.0"/>
          <trusted-key id="F254B35617DC255D9344BCFA873A8E86B4372146">
             <trusting group="org.apache"/>
             <trusting group="org.codehaus.plexus"/>
@@ -864,6 +897,13 @@
          <artifact name="org.springframework.boot.gradle.plugin-3.3.5.pom">
             <sha256 value="c86b0a2a61ce16e5b630ad14609de74bd74e1405f6de87643e9b41b1b1288e77" origin="Generated by Gradle" reason="Artifact is not signed">
                <also-trust value="bcfb4988acb2589286358abaa45702dcc604e65f250ea8536a2f1e4620047c4a"/>
+            </sha256>
+         </artifact>
+      </component>
+      <component group="org.springframework.boot" name="org.springframework.boot.gradle.plugin" version="3.5.9">
+         <artifact name="org.springframework.boot.gradle.plugin-3.5.9.pom">
+            <sha256 value="b28058d7c1c217dcc1864cbf1d0a6146a18a2a65e19d5979a6563a9e5e72863d" origin="Generated by Gradle" reason="Artifact is not signed">
+                <also-trust value="7864c491d29b5966365014965308c4f958eb2330524863cc31903f3a9f8e1a87" />
             </sha256>
          </artifact>
       </component>
