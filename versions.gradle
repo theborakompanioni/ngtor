@@ -1,5 +1,5 @@
 ext {
-    torSpringBootStarterVersion = '0.10.0'
+    torSpringBootStarterVersion = '0.11.0'
     guavaVersion = '33.5.0-jre'
     lombokVersion = '1.18.42'
     checkstyleVersion = '12.3.1'
