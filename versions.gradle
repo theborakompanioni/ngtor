@@ -1,10 +1,10 @@
 ext {
-    torSpringBootStarterVersion = '0.10.0'
+    torSpringBootStarterVersion = '0.11.0'
     guavaVersion = '33.5.0-jre'
     lombokVersion = '1.18.42'
     checkstyleVersion = '12.3.1'
     findsecbugsPluginVersion = '1.14.0'
-    springBootGradlePluginVersion = '3.5.9'
+    springBootGradlePluginVersion = '4.0.1'
 }
 
 // hack: 2022-10-08T00:00Z - change this timestamp to invalidate GitHub Actions gradle caches.

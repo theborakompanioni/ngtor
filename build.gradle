@@ -158,17 +158,17 @@ subprojects {
             // developmentOnly 'org.springframework.boot:spring-boot-devtools'
         }
 
-        jar {
+        tasks.named("jar") {
             enabled = true
         }
 
-        bootJar {
+        tasks.named("bootJar") {
             // creates a launch script for the executable jar
-            launchScript()
+            //launchScript()
             archiveClassifier.set('boot')
         }
 
-        bootRun {
+        tasks.named("bootRun") {
             environment "X_GRADLE", true
         }
 
