@@ -28,6 +28,7 @@
             <trusting group="com.puppycrawl.tools" name="checkstyle" version="10.3.4"/>
             <trusting group="com.puppycrawl.tools" name="checkstyle" version="12.3.1"/>
             <trusting group="com.puppycrawl.tools" name="checkstyle" version="13.0.0"/>
+            <trusting group="com.puppycrawl.tools" name="checkstyle" version="13.1.0"/>
          </trusted-key>
          <trusted-key id="077E8893A6DCC33DD4A4D5B256E73BA9A0B592D0" group="^org[.]apache[.]logging($|([.].*))" regex="true"/>
          <trusted-key id="0785B3EFF60B1B1BEA94E0BB7C25280EAE63EBE5" group="^org[.]apache[.]httpcomponents($|([.].*))" regex="true"/>
@@ -78,6 +79,7 @@
             <trusting group="org.apache.activemq" name="activemq-bom" version="6.1.8"/>
          </trusted-key>
          <trusted-key id="1D04A424F505394DBED15D451D0690E353BE126D" group="net.minidev"/>
+         <trusted-key id="1EE2E8230365CBF844351FE6134A8CD6A0239B74" group="^com[.]netflix[.]nebula($|([.].*))" regex="true"/>
          <trusted-key id="223D3A74B068ECA354DC385CE126833F9CF64915" group="org.apache.xbean"/>
          <trusted-key id="2518174F4111F02779592A6F9757D7E7E06DD2AC" group="io.prometheus"/>
          <trusted-key id="2655176F748FD83725B4805FF2A01147D830C125">
