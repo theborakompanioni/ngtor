@@ -304,6 +304,7 @@
             <trusting group="org.projectlombok" name="lombok" version="1.18.30"/>
             <trusting group="org.projectlombok" name="lombok" version="1.18.34"/>
             <trusting group="org.projectlombok" name="lombok" version="1.18.42"/>
+            <trusting group="org.projectlombok" name="lombok" version="1.18.44"/>
          </trusted-key>
          <trusted-key id="D54A395B5CF3F86EB45F6E426B1B008864323B92" group="org.antlr"/>
          <trusted-key id="D6F1BC78607808EC8E9F69437A8860944FAD5F62" group="org.apache.commons" name="commons-parent" version="34"/>
