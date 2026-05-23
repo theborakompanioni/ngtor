@@ -1251,7 +1251,7 @@ ykWk1Wysqwq51xwM
 -----END PGP PUBLIC KEY BLOCK-----
 
 pub    B0F3710FA64900E7
-uid    ?amonn McManus <eamonn@mcmanus.net>
+uid    �amonn McManus <eamonn@mcmanus.net>
 
 sub    7892707E9657EBD4
 -----BEGIN PGP PUBLIC KEY BLOCK-----
@@ -1544,7 +1544,7 @@ GwVYyP80JFn7CJluOl/u8vxi2EVFN6aVqdzwoswFE3+0W0AfbpHUUT4oeBW5OBTJ
 -----END PGP PUBLIC KEY BLOCK-----
 
 pub    BFF2EE42C8282E76
-uid    Jean-Baptiste Onofr? <jbonofre@apache.org>
+uid    Jean-Baptiste Onofré <jbonofre@apache.org>
 
 sub    6B7EDFC69F043BBC
 -----BEGIN PGP PUBLIC KEY BLOCK-----
@@ -2411,7 +2411,7 @@ Dku+hCB3xh5oGGk7FagBQj0vvu1g7b6H
 -----END PGP PUBLIC KEY BLOCK-----
 
 pub    E7D88DB8427DE651
-uid    Edd? Mel?ndez Gonzales <eddu.melendez@gmail.com>
+uid    Eddú Meléndez Gonzales <eddu.melendez@gmail.com>
 
 sub    D557964963279019
 -----BEGIN PGP PUBLIC KEY BLOCK-----
@@ -3473,8 +3473,25 @@ pXIm3TUM14sAn3V0cheXNRVmD2OhB5yqYpYd0Hn1
 =ezg4
 -----END PGP PUBLIC KEY BLOCK-----
 
+pub    134A8CD6A0239B74
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+xsFNBGkzV9IBEADZxYc+XIwmJBGS2Nnpc7Z13h2y3dB9DZNPUpHMy6Zgjr5aLWbA
+wif5VUoRYQEAZFXg1cYn08jepYNoRDfNEBUeNbumhvH9KPMJkHOcg2rwCTjQTQJw
+YjlFAV+iKShWcCtAHtoeJWohVYNKojTmR0OpbQVSobdlxySlGsTCtUetTzFni5BA
+ZqaUrnND6qd4x+KYnAgvHi0s8E+1L4euyNy4hZUpprI9m6m5CmKdnB1yjBOub+Ik
+0mqD9lFig6zbKqVRMQ5mzuAOdUL62knp5/lZPH4Ksu+Jqm9nV9BMg0DvpHwRfcmF
+7/DhX6gukLWyXOxOSht7LloQFmSYT7jikqepcIlppq4OEjikPFe6KCZUN8UkmWyd
+24PnQ2lUB3JFxJxGpMCRuCw7RPZ6VvOaao9cSBtxUXyPHa8XtvIb3pXyOeYM1yKf
+kESSJCmOzxMMiY53Dz3ZN2+rsBnGjgZVCk7KJmN9B+ObTWl3Bc6qNUIeEULiA6/F
+kmvbpJQ/MrKWTu8NFGrDAs9Mkw313/t0XC/+fn5e11llAaYVsmjMqEOJ04cSQBwp
+ZRovFZYdPAxdJipsvrG/rce3SnNDiwep66WPeh3W911p8OmKZcw2YSg12fI2QJ+0
+nmhKgiEtlZSJ6Hi4qEkL29banYUiJJ5YFdzniJFn8z2Cq9rVWaBW8AEFYwARAQAB
+=ncMI
+-----END PGP PUBLIC KEY BLOCK-----
+
 pub    15C71C0A4E0B8EDD
-uid    Matthias Bl?sing <mblaesing@doppel-helix.eu>
+uid    Matthias Bläsing <mblaesing@doppel-helix.eu>
 
 sub    891E4C2D471515FE
 -----BEGIN PGP PUBLIC KEY BLOCK-----
@@ -4684,7 +4701,7 @@ d3RqmCAXNGrjh8p3x8rPAFrvagaS2grj0z9tIo3Ki5HXDlWO9Q==
 -----END PGP PUBLIC KEY BLOCK-----
 
 pub    3C9B410084525C69
-uid    Fabian St?ber <fabian@fstab.de>
+uid    Fabian Stäber <fabian@fstab.de>
 
 sub    AC2149E7FF1CCBF3
 sub    9757D7E7E06DD2AC
@@ -6175,7 +6192,7 @@ Z2luZ0Btb25nb2RiLmNvbT4=
 -----END PGP PUBLIC KEY BLOCK-----
 
 pub    79E193516BE7998F
-uid    Filip Jirs?k <filip@jirsak.org>
+uid    Filip Jirsák <filip@jirsak.org>
 
 sub    9F7335D63326E7F9
 -----BEGIN PGP PUBLIC KEY BLOCK-----
