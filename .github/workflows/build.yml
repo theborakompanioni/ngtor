@@ -23,7 +23,7 @@ jobs:
 
     strategy:
       matrix:
-        java-version: [ 21 ]
+        java-version-file: [ '.sdkmanrc' ]
 
     steps:
       - name: Checkout Code
@@ -32,8 +32,7 @@ jobs:
       - name: Setup JDK
         uses: actions/setup-java@v6
         with:
-          distribution: 'adopt'
-          java-version: ${{ matrix.java-version }}
+          java-version-file: ${{ matrix.java-version-file }}
 
       - name: Print Java Version
         run: java --version
