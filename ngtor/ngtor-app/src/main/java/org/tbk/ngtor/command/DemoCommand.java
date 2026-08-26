@@ -41,7 +41,7 @@ public class DemoCommand implements ApplicationRunner {
             log.info("-------------------------------------------------");
             try {
                 log.info("Or browse to {} in Tor Browser, or", url);
-                log.info("run: `torsocks -p {} curl {}/index.html -v`", tor.getProxy().getPort(), url);
+                log.info("run: `torsocks -p {} curl {}/index.html -v`", tor.getProxy("localhost").getPort(), url);
             } catch (TorCtlException e) {
                 log.warn("Could not get tor proxy port");
             }
