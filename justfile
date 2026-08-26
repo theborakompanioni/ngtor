@@ -88,5 +88,5 @@ update-verification *args='':
       -Dorg.gradle.caching=false \
       -Dorg.gradle.configureondemand=false \
       -Dorg.gradle.parallel=false \
-      dependencies \
+      dependencies dependencyTree \
       --write-verification-metadata pgp,sha256 --export-keys --write-locks {{args}}
