@@ -7,7 +7,7 @@ bootJar {
 }
 
 dependencies {
-    implementation "io.github.theborakompanioni:spring-tor-starter:${torSpringBootStarterVersion}"
+    implementation rootProject.libs.tor.spring.boot.starter
 
     implementation 'org.springframework.boot:spring-boot-starter-webmvc'
     implementation 'org.springframework.boot:spring-boot-starter-actuator'
