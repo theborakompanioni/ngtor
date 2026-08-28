@@ -1,0 +1,24 @@
+# https://docs.gradle.org/current/userguide/version_catalogs.html
+[versions]
+guava = "33.7.1-jre"
+lombok = "1.18.46"
+checkstyle = "14.0.0"
+spotbugs = "4.10.4"
+findsecbugsPlugin = "1.14.0"
+springBootPlugin = "4.1.1"
+torSpringBootStarter = "0.12.0"
+
+[libraries]
+guava = { module = "com.google.guava:guava", version.ref = "guava" }
+spotbugs-annotations = { module = "com.github.spotbugs:spotbugs-annotations", version.ref = "spotbugs" }
+findsecbugs-plugin = { module = "com.h3xstream.findsecbugs:findsecbugs-plugin", version.ref = "findsecbugsPlugin" }
+spring-boot-plugin = { module = "org.springframework.boot:spring-boot-gradle-plugin", version.ref = "springBootPlugin" }
+tor-spring-boot-starter = { module = "io.github.theborakompanioni:spring-tor-starter", version.ref = "torSpringBootStarter" }
+
+[plugins]
+nebula-release = { id = "nebula.release", version = "21.0.0" }
+nebula-lint = { id = "nebula.lint", version = "21.2.0" }
+nebula-project = { id = "com.netflix.nebula.project", version = "13.1.2" }
+spotbugs = { id = "com.github.spotbugs", version = "6.5.11" }
+spring-boot = { id = "org.springframework.boot", version.ref = "springBootPlugin" }
+lombok = { id = "io.freefair.lombok", version = "9.5.0" }

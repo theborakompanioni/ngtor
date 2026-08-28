@@ -6,23 +6,27 @@ import org.gradle.api.tasks.testing.logging.TestLogEvent
 import org.springframework.boot.gradle.plugin.SpringBootPlugin
 
 buildscript {
-    apply from: 'versions.gradle'
     repositories {
         mavenCentral()
     }
     dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootGradlePluginVersion}")
+        classpath libs.spring.boot.plugin
+    }
+    // https://docs.gradle.org/current/userguide/dependency_locking.html#sec:activate-locking-build-script
+    configurations.classpath {
+        resolutionStrategy.activateDependencyLocking()
     }
 }
 
 plugins {
     id 'idea'
-    id 'nebula.release' version '21.0.0'
-    id 'nebula.lint' version '21.2.0'
-    id 'com.netflix.nebula.project' version '13.1.2'
-    id 'com.github.spotbugs' version '6.5.5' apply false
-    id 'org.springframework.boot' version "$springBootGradlePluginVersion" apply false
-    id 'io.freefair.lombok' version '9.5.0' apply false
+
+    alias(libs.plugins.nebula.release)
+    alias(libs.plugins.nebula.lint)
+    alias(libs.plugins.nebula.project)
+    alias(libs.plugins.spotbugs) apply false
+    alias(libs.plugins.spring.boot) apply false
+    alias(libs.plugins.lombok) apply false
 }
 
 contacts {
@@ -117,12 +121,13 @@ subprojects {
     }
 
     dependencies {
-        compileOnly "com.github.spotbugs:spotbugs-annotations:${spotbugs.toolVersion.get()}"
-        testCompileOnly "com.github.spotbugs:spotbugs-annotations:${spotbugs.toolVersion.get()}"
-        spotbugsPlugins "com.h3xstream.findsecbugs:findsecbugs-plugin:${findsecbugsPluginVersion}"
+        compileOnly rootProject.libs.spotbugs.annotations
+        testCompileOnly rootProject.libs.spotbugs.annotations
+        spotbugsPlugins rootProject.libs.findsecbugs.plugin
 
         implementation 'org.slf4j:slf4j-api'
-        implementation "com.google.guava:guava:${guavaVersion}"
+
+        implementation rootProject.libs.guava
 
         testImplementation 'org.junit.jupiter:junit-jupiter-api'
         testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
@@ -212,7 +217,7 @@ subprojects {
     }
 
     lombok {
-        version = "${lombokVersion}"
+        version = rootProject.libs.versions.lombok.get()
     }
 
     tasks.withType(Test).configureEach {
@@ -250,6 +255,7 @@ subprojects {
     }
 
     spotbugs {
+        toolVersion = rootProject.libs.versions.spotbugs.get()
         effort = Effort.MAX
         reportLevel = Confidence.valueOf('LOW')
         ignoreFailures = false
@@ -265,7 +271,7 @@ subprojects {
     }
 
     checkstyle {
-        toolVersion = "${checkstyleVersion}"
+        toolVersion = rootProject.libs.versions.checkstyle.get()
         configFile = rootProject.file('./checkstyle.xml')
         maxErrors = 0
         ignoreFailures = false
