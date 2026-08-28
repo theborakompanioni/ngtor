@@ -6,9 +6,6 @@ import org.gradle.api.tasks.testing.logging.TestLogEvent
 import org.springframework.boot.gradle.plugin.SpringBootPlugin
 
 buildscript {
-    repositories {
-        mavenCentral()
-    }
     dependencies {
         classpath libs.spring.boot.plugin
     }
@@ -98,19 +95,6 @@ subprojects {
         targetCompatibility = JavaVersion.VERSION_21
         toolchain {
             languageVersion = JavaLanguageVersion.of(JavaVersion.VERSION_21.getMajorVersion())
-        }
-    }
-
-    repositories {
-        mavenCentral()
-        maven {
-            // needed for netlayer
-            url = 'https://jitpack.io'
-        }
-        mavenLocal {
-            mavenContent {
-                snapshotsOnly()
-            }
         }
     }
 
@@ -212,8 +196,8 @@ subprojects {
         }
     }
 
-    artifacts {
-        archives testJar
+    tasks.named("assemble") {
+        dependsOn(testJar)
     }
 
     lombok {
@@ -228,16 +212,19 @@ subprojects {
             exceptionFormat = TestExceptionFormat.FULL
             showCauses = true
             showStackTraces = true
+        }
 
-            afterSuite { desc, result ->
-                if (!desc.parent) { // will match the outermost suite
+        addTestListener(new TestListener() {
+            @Override
+            void afterSuite(TestDescriptor suite, TestResult result) {
+                if (!suite.parent) { // will match the outermost suite
                     def output = "Results: ${result.resultType} (${result.testCount} tests, ${result.successfulTestCount} successes, ${result.failedTestCount} failures, ${result.skippedTestCount} skipped)"
                     def startItem = '|  ', endItem = '  |'
                     def repeatLength = startItem.length() + output.length() + endItem.length()
                     println('\n' + ('-' * repeatLength) + '\n' + startItem + output + endItem + '\n' + ('-' * repeatLength))
                 }
             }
-        }
+        })
     }
 
     tasks.register('dependencyTree', DependencyReportTask) {}
