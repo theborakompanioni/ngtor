@@ -68,18 +68,18 @@ package:
 
 # check style
 [group("development")]
-checkstyle:
-    @./gradlew checkstyleMain checkstyleTest checkstyleIntegTest
+checkstyle *args='':
+    @./gradlew checkstyleMain checkstyleTest checkstyleIntegTest {{args}}
 
 # spot bugs
 [group("development")]
-spotbugs:
-    @./gradlew spotbugsMain spotbugsTest spotbugsIntegTest
+spotbugs *args='':
+    @./gradlew spotbugsMain spotbugsTest spotbugsIntegTest {{args}}
 
 # lint files
 [group("development")]
-lint:
-    @./gradlew autoLintGradle --no-parallel
+lint *args='':
+    @./gradlew autoLintGradle --no-parallel {{args}}
 
 # update metadata for dependency verification
 [group("development")]
