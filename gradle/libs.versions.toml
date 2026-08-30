@@ -2,7 +2,7 @@
 [versions]
 guava = "33.7.1-jre"
 lombok = "1.18.46"
-checkstyle = "14.0.0"
+checkstyle = "14.1.0"
 spotbugs = "4.10.4"
 findsecbugsPlugin = "1.14.0"
 springBootPlugin = "4.1.1"
