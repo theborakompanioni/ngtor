@@ -16,7 +16,7 @@ spring-boot-plugin = { module = "org.springframework.boot:spring-boot-gradle-plu
 tor-spring-boot-starter = { module = "io.github.theborakompanioni:spring-tor-starter", version.ref = "torSpringBootStarter" }
 
 [plugins]
-nebula-release = { id = "nebula.release", version = "21.0.0" }
+nebula-release = { id = "nebula.release", version = "21.1.3" }
 nebula-lint = { id = "nebula.lint", version = "21.2.0" }
 nebula-project = { id = "com.netflix.nebula.project", version = "13.1.2" }
 spotbugs = { id = "com.github.spotbugs", version = "6.5.11" }
